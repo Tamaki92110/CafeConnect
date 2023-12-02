@@ -1,0 +1,22 @@
+databases:
+  - name: Cafe Connect_DB
+    databaseName: cafe_connect_db
+    user: Cafe Connect
+    region: singapore
+
+services:
+  - type: web
+    name: Cafe Connect
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name:  Cafe Connect_DB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+
