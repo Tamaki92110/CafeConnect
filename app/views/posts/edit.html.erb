@@ -1,0 +1,11 @@
+<%= form_for @post do |f| %>
+<%= f.label :cafe_name %>
+<%= f.text_field :cafe_name, :size => 30 %>
+<%= f.label :about %>
+<%= f.text_area :about, :size => "30x2" %>
+<%= f.label :address %>
+<%= f.text_field :address, :size => 30 %>
+<%= f.label :name %>
+<%= f.text_field :name, :size => 30 %>
+ <%= f.submit "編集する" %>
+  <% end %>

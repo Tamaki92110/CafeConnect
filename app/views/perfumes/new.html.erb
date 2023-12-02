@@ -1,0 +1,46 @@
+<%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
+    <div class="container-sindan">
+        <div class="row">
+            <div class="col-12">
+                <p>Question1. 誰と行く？</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>恋人と</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>友達と</p>
+            </div>
+            <div class="col-6">
+            <p><%= f.check_box :question, {multiple: true}, "3", nil %>1人で</p>
+        </div>
+        <div class="col-12">
+        
+        <p>Question2. 重要視するもの…</p>
+        </div>
+        <div class="col-6">
+            <p><%= f.check_box :question, {multiple: true}, "1", nil %>雰囲気</p>
+        </div>
+        <div class="col-6">
+            <p><%= f.check_box :question, {multiple: true}, "2", nil %>フード・ドリンク</p>
+        </div>
+       
+
+        <div class="col-12">
+        
+        <p>Question3. 駅からのアクセス</p>
+        </div>
+        <div class="col-6">
+            <p><%= f.check_box :question, {multiple: true}, "1", nil %>駅近</p>
+        </div>
+        <div class="col-6">
+            <p><%= f.check_box :question, {multiple: true}, "2", nil %>隠れ家</p>
+        </div>
+
+        <div class="col-12">
+
+        </div>
+        </div>
+        <div class="sindanbotan">
+            <%= f.submit "post" %>
+        </div>
+<% end %>
