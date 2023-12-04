@@ -7,22 +7,35 @@
     <%= csp_meta_tag %>
 
     <script src="https://kit.fontawesome.com/fcd7a7f1bc.js" crossorigin="anonymous"></script>
-
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
   <header>
-   <h1>Original</h1>
+   <h1>Cafe Connect</h1>
    <div class="header-list">
     <ul>
+     <li><%= link_to "new post", new_post_path %></li>
+
+     <li><%= link_to "recommedation",  perfumes_path %></li>
+     
      <% if user_signed_in? %>
-      <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-     <% else %>
-      <li><%= link_to "新規登録", new_user_registration_path %></li>
-      <li><%= link_to "ログイン", new_user_session_path %></li>
+     <li><%= link_to "mypage", user_path(current_user.id) %></li>
      <% end %>
+
+     <% if user_signed_in? %>
+      <li><%= link_to 'logout', destroy_user_session_path, method: :delete %></li>
+     <% else %>
+      <li><%= link_to "new register", new_user_registration_path %></li>
+      <li><%= link_to "login", new_user_session_path %></li>
+     <% end %>
+     
     </ul>
    </div>
   </header>
