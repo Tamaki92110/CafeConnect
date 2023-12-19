@@ -1,23 +1,32 @@
+<link rel="stylesheet" href"app/assets/stylesheets/perfumes.scss">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda&family=Yusei+Magic&display=swap" rel="stylesheet">
+
 <!DOCTYPE html> 
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>カフェ診断スタート</title>
-    </head>
 
-    <body>
-        <header>
-            <h1 class="headline">
-            <a>Perfu_me</a>
-            </h1>
-            <ul class="nav-list">
-                <li class="nav-list-item">about fragrance</li>
-                <li class="nav-list-item"><%= link_to "診断", perfumes_path, class: "link" %></li>
-            </ul>
-        </header>
+<div class="reccomend_header">
+  <h2>〜おすすめカフェ診断〜</h2>
+</div>
 
-        <div class="start">
-            <h6>Are you ready?</h6>
-            <%= link_to "診断を始める", new_perfume_path, class: "link" %>
-        </div>
-    </body>
+<div class="reccomendation">
+  
+<div class="lady">
+  <div class="cafe_lady">
+    <%= image_tag 'cafe-lady.jpeg', class:'icon'%>
+  </div>
+</div>
+ 
+  <div class="start">
+    <h2>簡単な質問に答えるだけでおすすめのカフェをご紹介</h2>
+    
+    <div class="start2"> 
+      <%= link_to "診断を始める", new_perfume_path, class: "link" %>
+      </div>
+
+  </div>
+
+</div>    

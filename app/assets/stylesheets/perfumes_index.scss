@@ -1,0 +1,65 @@
+// Place all the styles related to the perfumes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.reccomend_header{
+    text-align: center;
+    margin:5%;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.lady{
+    margin-left: 25%;
+    margin-right: 10%;
+    width:50%
+}
+
+.cafe_lady{
+    width: 225%;
+    height: 225%;
+    
+}
+
+.start{
+    text-align: center;
+    width: 50%;
+    margin-right:30%;
+    margin-top: 10%;
+    font-size: 80%;
+    font-family: 'Yusei Magic', sans-serif;
+    
+}
+
+.start2{
+    margin-top: 30%;
+}
+
+.reccomendation{
+    display: flex;
+    
+    
+}
+
+.link{
+    display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 100px;
+	margin: auto;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	color: #ffbf00;;
+	border-bottom: 2px solid #ffbf00;;
+	border-radius: 100vh;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	-webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	transition: 0.5s;
+    background-color: white;
+}
+.link:hover{
+    color: #fff;
+	background: #ffbf00;
+	border-bottom: 2px solid #fff;
+	transform: translateY(3px);
+}

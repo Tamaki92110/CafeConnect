@@ -1,3 +1,81 @@
-// Place all the styles related to the rooms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.user{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 5%;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 150%;
+
+}
+
+.dm{
+    padding: 3% 10%;
+    border: 3px solid #fcc82b;
+    background: linear-gradient(to bottom right, #f6e4c9,#f6daaf );
+    margin: 5% auto;
+    display: table;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 120%;
+    
+}
+
+.back{
+   margin-left: 60%;
+   display: block;
+   text-align: center;
+   vertical-align: middle;
+   text-decoration: none;
+   width: 10%;
+   padding: 0.5%;
+   font-weight: bold;
+   color: #ffbf00;
+   background-color: white;
+   border-bottom: 2px solid #ffbf00;
+   border-radius: 100vh;
+   box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+   -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+   transition: 0.5s;
+   font-family: 'Yusei Magic', sans-serif;
+
+}
+
+.back:hover{
+    color: #fff;
+	background: #ffbf00;
+	border-bottom: 2px solid #fff;
+	transform: translateY(3px);
+}
+     
+
+
+.dm-botan{
+	
+	vertical-align: middle;
+	text-decoration: none;
+	width: 20%;
+	margin-left: 80%;
+	padding: 1% ;
+	font-weight: bold;
+    background-color: white;
+	color: #ffbf00;
+	border: 2px solid #ffbf00;;
+	border-radius: 100vh;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	-webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	transition: 0.5s;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.dm-botan:hover{
+    color: #fff;
+	background: #ffbf00;
+	border: 2px solid #fff;
+	transform: translateY(3px);
+}
+
+.text-field{
+   margin-top: 2%;
+   font-family: 'Yusei Magic', sans-serif;
+}

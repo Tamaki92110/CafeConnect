@@ -1,0 +1,72 @@
+.field{
+    font-size: 200%;
+    display:flex;
+    flex-flow: column;
+}
+
+.new{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:space-evenly;
+    margin: 5% auto;
+    font-family: 'Yusei Magic', sans-serif;
+    
+}
+
+.left{
+    height: 400px;
+    width:30%;
+}
+
+.toukou-botan{
+    display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 25%;
+    margin-top: 3%;
+	
+	padding: 2% ;
+	font-weight: bold;
+    background-color: white;
+	color: #ffbf00;
+	border: 2px solid #ffbf00;
+	border-radius: 100vh;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	-webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	transition: 0.5s;
+
+}
+
+.toukou-botan:hover{
+    color: #fff;
+	background: #ffbf00;
+	border: 2px solid #fff;
+	transform: translateY(3px);
+}
+
+.modoru-botan{
+    display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 22%;
+    margin-top: 5%;
+	
+	padding: 1% ;
+	font-weight: bold;
+    background-color: white;
+	color: #ffbf00;;
+	border: 2px solid #ffbf00;;
+	border-radius: 100vh;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	-webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	transition: 0.5s;
+}
+
+.modoru-botan:hover{
+    color: #fff;
+	background: #ffbf00;
+	border: 2px solid #fff;
+	transform: translateY(3px);
+}

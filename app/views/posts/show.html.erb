@@ -1,71 +1,103 @@
-<h1>題名</h1>
-<h3>一覧ページ</h3>
+<link rel="stylesheet" href"app/assets/stylesheets/show.scss">
+
+<div class="show">
+
 <div class="post">
-  <%= image_tag @post.image_url, size: "250x200" if @post.image? %>
-  <p><%= @post.name %></p>
-  <p><%= @post.about %></p>
-  <p><%= @post.cafe_name %></p>
-  <p><%= @post.address %></p>
-  <p><%= @post.created_at %></p>
-  <%= link_to @post.user.name, user_path(@post.user.id) %> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Yusei+Magic&display=swap" rel="stylesheet">
+  
+  <div class="post_image">
+    <%= image_tag @post.image_url, size: "50%x80%" if @post.image? %>
+    </div>
 
-  <% if user_signed_in? %>
-      <% if current_user.already_liked?(@post) %>
-        <%= link_to post_like_path(@post), method: :delete do %>
-            <i class="fas fa-heart"></i><%= @post.likes.count %>
+    <div class="post_detail"> 
+
+    
+    <div class="a"> 
+        <h2><%= @post.cafe_name %></h2>
+        <p><%= @post.about %></p>
+        <p><%= @post.address %></p>
+        <p><%= @post.created_at %></p>
+        <p><%= @post.name %></p>
+        <%= link_to @post.user.name, user_path(@post.user.id) %> 
+
+        <% if user_signed_in? %>
+          <% if current_user.already_liked?(@post) %>
+            <%= link_to post_like_path(@post), method: :delete do %>
+              <i class="fas fa-heart"></i><%= @post.likes.count %>
             
-        <% end %>
-      <% else %>
-        <%= link_to post_likes_path(@post), method: :post do %>
-            <i class="far fa-heart"></i><%= @post.likes.count %>
+          <% end %>
+      
+          <% else %>
+            <%= link_to post_likes_path(@post), method: :post do %>
+             <i class="far fa-heart"></i><%= @post.likes.count %>
            
+          <% end %>
         <% end %>
+
+      <% else %>
+        <i class="far fa-heart"></i><%= @post.likes.count %>
+        <p>いいねの数 = </p><%= @post.likes.count %>
       <% end %>
-    <% else %>
-      <i class="far fa-heart"></i><%= @post.likes.count %>
-      <p>いいねの数 = </p><%= @post.likes.count %>
-    <% end %>
-    <% if user_signed_in? && current_user.id == @post.user_id %>
-    <%= link_to "編集する", edit_post_path(@post.id) %>
-    <%= link_to "削除する", post_path(@post.id), method: :delete %>
-    <% end %> 
+      
+      <% if user_signed_in? && current_user.id == @post.user_id %>
+        
+        <div class="botans">
+          <%= link_to "編集する", edit_post_path(@post.id), class:"henshuu-botan" %>
+          <%= link_to "削除する", post_path(@post.id), method: :delete, class:"sakujyo-botan" %>
+        </div>
+          <% end %> 
+         
+    </div>
+    
+  
+    <div class="b">      
+      <h2>いいねしたユーザー</h2>
+        <% @post.liked_users.each do |user| %>
+          <li><%= user.email %></li>
+        <% end %>
 
-</div>
-
-<h2>いいねしたユーザー</h2>
-<% @post.liked_users.each do |user| %>
-  <li><%= user.email %></li>
-<% end %>
-
-<div class="comment-wrapper">
-  <p>コメント一覧</p>
-  <% @comments.each do |c| %>
-    <div>
+      <h2>コメント一覧</h2>
+        <% @comments.each do |c| %>
+      <div>
       <%= c.user.email unless c.user.blank? %>
       <br>
       <%= c.content %>
-    </div>
+      </div>
       <br>
-  <% end %>
+       <% end %>
 
-  <% if user_signed_in? %>
-    <%= form_with(model: [@post, @comment], local: true) do |f| %>
+    <% if user_signed_in? %>
+      <%= form_with(model: [@post, @comment], local: true) do |f| %>
       <%= f.text_area :content %>
       <%= button_tag type: "submit" do %>
         <i class="far fa-comments"></i> コメントする
       <% end %>
     <% end %>
   <% end %>
+
+  <%= link_to "トップに戻る", posts_path %>
+  </div>
+
+  
+  
+  </div>
+
 </div>
 
-<%= link_to "Tweet一覧に戻る", posts_path %>
+<div class="map_header"> 
+  <h2>~Map~</h2>
+</div>
 
 <div id='map'></div>
 
 <style>
 #map {
-  height: 600px;
-  width: 100%;
+  height: 500px;
+  margin : 5% auto;
+  width: 500px;
+  
 }
 </style>
 
@@ -90,4 +122,5 @@ function initMap(){
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwITqnfMO2f64ReD-fc26O3H89FaaiALk&callback=initMap" async defer></script>
 
+</div>
 

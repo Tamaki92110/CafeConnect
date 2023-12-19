@@ -1,49 +1,82 @@
 .posts-container {
-    width: 80%;
-    margin: 10% auto;
+   
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     
+    width: 70%;
+    height: 70%;
+    margin-left: 15%;
     
 
   }
   h3 {
-    width: 100px;
-    margin: 30px auto;
+    margin-top: 10%;
+    margin-bottom: 5%;
     text-align: center;
     font-family: 'Kaushan Script', cursive;
+    font-size: 500%;
+    color:#241E17;
   }
   
  
   
 
   .icon{
-    width: 100%;
-    height: px;
+    text-align: center;
+    position: relative;
+    width: 50%;
+    
+  }
+
+  .center1{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: white;
+    font-size: 300%;
+    font-family: 'Merienda', cursive;
+    
+  }
+
+  .center2{
+    position: absolute;
+    top: 42%;
+    left: 11%;
+    color: white;
+    font-size: 120%;
+
   }
 
   .post-image{
     text-align: center;
+    
+  }
+  .photo{
+    
   }
 
+  
   .left-container{
-    width: 50%;
-    margin : 0 auto;
+    width: 33%;
     justify-content: flex-end;
-    
+    margin-top: 2.5%;
     
 
   }
   
 .posts-container::after{
   display:block;
-  width:50%;
+  width:33%;
   content: "";
 }
+
+
+
+
 
 .post-about{
   text-align: right;
   padding-right: 25%;
+  font-size: 120%;
 }
 

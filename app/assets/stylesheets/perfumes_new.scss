@@ -1,0 +1,44 @@
+.container-sindan{
+    display:flex;
+    flex-flow: column;
+    margin-left: 35%;
+    margin-top: 5%;
+    font-family: 'Yusei Magic', sans-serif;
+        
+}
+
+.row{
+   
+}
+.col-12{
+    font-size: 225%;
+}
+
+.col-6{
+    font-size: 150%;
+}
+
+.sindanbotan{
+    display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 100px;
+	margin: auto;
+	padding: 1rem ;
+	font-weight: bold;
+    background-color: white;
+	color: #ffbf00;;
+	border: 2px solid #ffbf00;;
+	border-radius: 100vh;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	-webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	transition: 0.5s;
+}
+
+.sindanbotan:hover{
+    color: #fff;
+	background: #ffbf00;
+	border: 2px solid #fff;
+	transform: translateY(3px);
+}

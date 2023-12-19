@@ -1,3 +1,9 @@
+<link rel="stylesheet" href"app/assets/stylesheets/perfumes_new.scss">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda&family=Yusei+Magic&display=swap" rel="stylesheet">
+
 <%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
     <div class="container-sindan">
         <div class="row">
@@ -12,11 +18,12 @@
             </div>
             <div class="col-6">
             <p><%= f.check_box :question, {multiple: true}, "3", nil %>1人で</p>
-        </div>
-        <div class="col-12">
+            </div>
         
-        <p>Question2. 重要視するもの…</p>
+        <div class="col-12">
+           <p>Question2. 重要視するもの…</p>
         </div>
+        
         <div class="col-6">
             <p><%= f.check_box :question, {multiple: true}, "1", nil %>雰囲気</p>
         </div>
@@ -40,7 +47,8 @@
 
         </div>
         </div>
-        <div class="sindanbotan">
-            <%= f.submit "post" %>
-        </div>
+        
+        <%= f.submit "post" , class: "sindanbotan" %>
+        
+        
 <% end %>

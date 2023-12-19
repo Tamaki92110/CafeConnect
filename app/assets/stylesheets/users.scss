@@ -1,3 +1,96 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.mypage{
+   display: flex;
+   margin: 10%;
+   font-family: 'Yusei Magic', sans-serif;
+   font-size: 120%;
+}
+
+.mypage1{
+    width: 50%;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    background: linear-gradient(to bottom right, #f6e4c9,#f6daaf );
+   
+    border-color: #fccf46;
+    border-width: thick;
+    border-radius: 10%;
+    margin-right: 5%;
+}
+
+
+
+
+.mypage2{
+  
+  width: 50%;
+  padding-top: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  background: linear-gradient(to bottom right, #f6e4c9,#f6daaf );
+  
+  border-color: #fccf46;
+  border-width: thick;
+  border-radius: 10%;
+  margin-left: 5%;
+  
+}
+
+.mypage3{
+    margin: 0% 0% 10% 80%;
+
+}
+
+.photo2{
+    margin-top: 5%;
+}
+
+.update-botan{
+    display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 100px;
+	margin: auto;
+	padding: 1rem ;
+	font-weight: bold;
+    background-color: white;
+	color: #ffbf00;;
+	border: 2px solid #ffbf00;;
+	border-radius: 100vh;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	-webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	transition: 0.5s;
+}
+
+.update-botan:hover{
+    color: #fff;
+	background: #ffbf00;
+	border: 2px solid #fff;
+	transform: translateY(3px);
+}
+
+.user-modoru{
+    display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 40%;
+	margin-left: 5%;
+	padding: 1%;
+	font-weight: bold;
+	color: #ffbf00;;
+	border-bottom: 2px solid #ffbf00;;
+	border-radius: 100vh;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	-webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+	transition: 0.5s;
+    background-color: white;
+}
+.user-modoru:hover{
+    color: #fff;
+	background: #ffbf00;
+	border-bottom: 2px solid #fff;
+	transform: translateY(3px);
+}
